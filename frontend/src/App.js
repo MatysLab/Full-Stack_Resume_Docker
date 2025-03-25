@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { fetchData } from './services/api'; // Import the API function to fetch data
+import Header from './components/Header'; // Import the Header component
+import Footer from './components/Footer'; // Import the Footer component
+import Home from './pages/Home'; // Import the Home page component
+import { ThemeProvider } from './context/ThemeContext'; // Import the ThemeProvider
 
 function App() {
   const [data, setData] = useState(null);  // State to hold the data from the backend
@@ -25,19 +29,22 @@ function App() {
 
   
   return (
-    <div className="App">
-      <header className="App-header">
+    <ThemeProvider>
+      <div className="App">
+        <Header />
+        <main className="App-content">
+          {/* Display loading state */}
+          {loading && <p>Loading...</p>}
 
-        {/* Display loading state */}
-        {loading && <p>Loading...</p>}
+          {/* Display error message if any */}
+          {error && <p className="text-error">Error: {error}</p>}
 
-        {/* Display error message if any */}
-        {error && <p style={{ color: 'red' }}>Error: {error}</p>}
-
-        {/* Display data once it's fetched */}
-        {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
-      </header>
-    </div>
+          {/* Render Home component and pass data to it */}
+          {!loading && !error && <Home data={data} />}
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

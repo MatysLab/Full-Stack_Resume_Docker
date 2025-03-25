@@ -1,20 +1,13 @@
 //Function to handle fetching of data from the backend API.(FastAPI)
+import { get } from '../utils/apiUtils';
+import { ENDPOINTS } from '../constants/apiEndpoints';
 
 export const fetchData = async () => 
 {
     try
     {
-        //Make a get request to FastAPI backend via the Nginx proxy
-        const response = await fetch( '/api/' );
-
-        //Check if successful
-        if ( !response.ok )
-        {
-            throw new Error("Connection to API failed.");
-        }
-
-        //Parse the JSON data from the response
-        const data = await response.json();
+        // Use the apiUtils to make the request
+        const data = await get(ENDPOINTS.RESUME_DATA);
         return data;
     }
     catch( error )
