@@ -23,6 +23,7 @@ function App() {
     getData();  // Invoke the fetch function
   }, []);  // Empty array ensures it runs once when the component mounts
 
+  
   return (
     <div className="App">
       <header className="App-header">
