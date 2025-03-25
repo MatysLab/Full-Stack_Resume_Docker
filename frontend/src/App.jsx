@@ -3,7 +3,7 @@ import './App.css';
 import { fetchData } from './services/api'; // Import the API function to fetch data
 import Header from './components/Header'; // Import the Header component
 import Footer from './components/Footer'; // Import the Footer component
-import Home from './pages/Home'; // Import the Home page component
+import Home from './pages/pages'; // Import the Home page component
 import { ThemeProvider } from './context/ThemeContext'; // Import the ThemeProvider
 
 function App() {
