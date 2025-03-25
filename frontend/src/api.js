@@ -4,8 +4,8 @@ export const fetchData = async () =>
 {
     try
     {
-        //Make a get request to FastAPI backend
-        const response = await fetch( 'http://wwww.semphas.com:8000/' );
+        //Make a get request to FastAPI backend via the Nginx proxy
+        const response = await fetch( '/api/' );
 
         //Check if successful
         if ( !response.ok )
