@@ -7,7 +7,7 @@ class Settings:
     API_VERSION = "0.1.0"
     
     # CORS settings
-    CORS_ORIGINS = ["http://localhost", "http://localhost:3000", "http://localhost:80"]
+    CORS_ORIGINS = ["http://www.semphas.com", "http://www.semphas.com:3000", "http://www.semphas.com:80"]
     CORS_ALLOW_CREDENTIALS = True
     CORS_ALLOW_METHODS = ["*"]
     CORS_ALLOW_HEADERS = ["*"]
