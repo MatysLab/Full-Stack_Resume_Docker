@@ -5,7 +5,7 @@ export const fetchData = async () =>
     try
     {
         //Make a get request to FastAPI backend
-        const response = await fetch( 'http://localhost:8000/some-endpoint' );
+        const response = await fetch( 'http://localhost:8000/' );
 
         //Check if successful
         if ( !response.ok )
