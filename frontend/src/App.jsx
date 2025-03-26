@@ -4,7 +4,9 @@ import './App.css';
 function App() {
   return (
     <div className="blank-slate">
-      {/* Your code will go here */}
+      <div>
+        <h1>Hello World</h1>
+      </div>
     </div>
   );
 }

@@ -17,7 +17,9 @@ This is a full-stack application with a React frontend and FastAPI backend, cont
 ## Docker Information
 ### To run a build use the following command:
 ```
-docker-compose up --build
+docker-compose up -d
+docker-compose up --build frontend
+docker-compose up --build backend
 ```
 
 ### Accessing the Application
