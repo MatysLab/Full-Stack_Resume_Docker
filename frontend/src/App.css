@@ -1,28 +1,19 @@
-.App {
-  display: flex;
-  flex-direction: column;
+/* Basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.blank-slate {
+  width: 100%;
   min-height: 100vh;
-}
-
-.App-content {
-  background-color: var(--background-color);
-  min-height: calc(100vh - 80px);
-  padding: var(--spacing-xl);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-.App-link {
-  color: var(--secondary-color);
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
