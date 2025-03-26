@@ -7,7 +7,13 @@ class Settings:
     API_VERSION = "0.1.0"
     
     # CORS settings
-    CORS_ORIGINS = ["http://localhost", "http://localhost:3000", "http://localhost:80"]
+    CORS_ORIGINS = [
+        "http://localhost",
+        "http://localhost:3000",
+        "http://localhost:80",
+        "https://localhost",
+        "https://localhost:443"
+    ]
     CORS_ALLOW_CREDENTIALS = True
     CORS_ALLOW_METHODS = ["*"]
     CORS_ALLOW_HEADERS = ["*"]
