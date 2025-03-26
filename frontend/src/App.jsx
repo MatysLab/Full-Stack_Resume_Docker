@@ -3,11 +3,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="blank-slate">
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    </div>
+    <main className="main">
+    </main>
   );
 }
 
